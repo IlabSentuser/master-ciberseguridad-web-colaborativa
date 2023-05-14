@@ -22,10 +22,10 @@ public class PublicContentBase extends Controller {
                 if (!Character.isLetterOrDigit(c)) {
                     registerError();
                 }
-                User u = new User(username, HashUtils.getMd5(password), type, -1);
-                u.save();
-                registerComplete();
             }
+            User u = new User(username, HashUtils.getMd5(password), type, -1);
+            u.save();
+            registerComplete();
         }
     }
 
